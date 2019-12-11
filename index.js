@@ -47,13 +47,18 @@ function renderList(list) {
 
     // run for loop to create seperate p elements with text from inputBox
     for (let i = 0; i < list.length; i++) {
+        let newItemDiv = document.createElement('div');
         let newItem = document.createElement('p');
         let itemContent = document.createTextNode(list[i]);
-        newItem.appendChild(itemContent);
-        newItem.className = 'test';
-        newItem.id = 'item' + i;
 
-        listDiv.appendChild(newItem);
+        newItem.appendChild(itemContent);
+        newItemDiv.appendChild(newItem);
+        
+        newItem.className = 'newItem';
+        newItem.id = 'item' + i;
+        newItemDiv.className = 'newItemDiv';
+
+        listDiv.appendChild(newItemDiv);
     };
     
 }
