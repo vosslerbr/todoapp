@@ -50,6 +50,8 @@ function renderList(list) {
         let newItem = document.createElement('p');
         let itemContent = document.createTextNode(list[i]);
         newItem.appendChild(itemContent);
+        newItem.className = 'test';
+        newItem.id = 'item' + i;
 
         listDiv.appendChild(newItem);
     };
