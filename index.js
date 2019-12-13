@@ -50,9 +50,13 @@ function renderList(list) {
         let newItemDiv = document.createElement('div');
         let newItem = document.createElement('p');
         let itemContent = document.createTextNode(list[i]);
+        let checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.id = 'checkbox' + i;
 
         newItem.appendChild(itemContent);
         newItemDiv.appendChild(newItem);
+        newItemDiv.appendChild(checkbox);
         
         newItem.className = 'newItem';
         newItem.id = 'item' + i;

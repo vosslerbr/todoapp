@@ -1,0 +1,81 @@
+body {
+    background-color: #212327;
+    font-family: 'Open Sans', sans-serif;
+    padding: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+    color: #f7f7f7;
+    margin-bottom: 2rem;
+}
+
+main {
+    width: 100%;
+    max-width: 520px;
+    margin: 4rem auto;
+}
+
+#inputBox {
+    padding: 1rem;
+    background-color: hsla(0, 0%, 97%, 0.22);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    color: #f7f7f7;
+    width: 100%;
+    margin: 0 auto 2rem auto;
+}
+
+.newItemDiv {
+    padding: 1rem;
+    background-color: hsla(0, 0%, 97%, 0.22);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    color: #f7f7f7;
+    width: 100%;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#allButtons {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+}
+
+#addButton {
+    padding: 1rem;
+    background-color: #3BDB8B;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    color: #f7f7f7;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+#undoAndDelete {
+    display: flex;
+    justify-content: space-between;
+}
+
+#undoButton, #clearButton {
+    width: calc(50% - 0.5rem);
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.25rem;
+    color: #f7f7f7;
+}
+
+#undoButton {
+    background-color: #3B9DE5;
+}
+
+#clearButton {
+    background-color: #E84C4C;
+}

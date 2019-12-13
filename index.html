@@ -4,16 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:700,800&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles/styles.css">
     <title>To Do App</title>
 </head>
 <body>
-    <div id="list"></div>
+    <main>
+        <h1>To Do</h1>
+
+        <div id="list"></div>
+
+        <input type="text" placeholder="Add Task" id="inputBox">
+        
+        
+        <div id="allButtons">
+            <button id="addButton">Add</button>
+            <div id="undoAndDelete">
+                <button id="undoButton">Undo</button>
+                <button id="clearButton">Delete All</button>
+            </div>
+        </div>
+
+    </main>
     
-    <input type="text" placeholder="Enter item here" id="inputBox">
-    <button id="addButton">Add Item</button>
     
-    <button id="undoButton">Undo</button>
-    <button id="clearButton">Clear My List</button>
 
 
     <script src="index.js"></script>
