@@ -9,21 +9,32 @@
     <link rel="stylesheet" href="styles/styles.css">
     <title>To Do App</title>
 </head>
-<body>
+<body class="light" id="body">
     <main>
         <h1>To Do</h1>
+        <div id="description" class="light">
+            <p>A <span>mostly</span> pure JS to-do list app. I went for the trendy 'neu-morphism' style just to see how it would look.</p>
+
+            <p>Type something in the input box, and press 'Add' or your enter key to add it to the list.</p>
+
+            <p>The 'Undo' button deletes the last thing added, and the 'Delete All' button will clear the list.</p>
+        </div>
 
         <div id="list"></div>
 
-        <input type="text" placeholder="Add Task" id="inputBox">
+        <input type="text" placeholder="Add Task" id="inputBox"  class="light">
         
         
         <div id="allButtons">
-            <button id="addButton">Add</button>
+            <button id="addButton" class="light">Add</button>
             <div id="undoAndDelete">
-                <button id="undoButton">Undo</button>
-                <button id="clearButton">Delete All</button>
+                <button id="undoButton" class="light">Undo</button>
+                <button id="clearButton" class="light">Delete All</button>
             </div>
+        </div>
+
+        <div id="dark-toggle" onclick="toggleDarkMode()">
+            <span>button</span>
         </div>
 
     </main>

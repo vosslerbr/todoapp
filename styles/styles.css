@@ -1,13 +1,45 @@
 body {
-    background-color: #212327;
     font-family: 'Open Sans', sans-serif;
     padding: 1rem;
+    transition: 0.2s;
 }
 
 h1 {
     font-size: 3rem;
-    color: #f7f7f7;
     margin-bottom: 2rem;
+}
+
+.dark {
+    box-shadow: 3px 3px 12px #0000007c, -3px -2px 12px #f7f7f71f;
+    color: #f7f7f7;
+    background-color: #212327;
+}
+
+.light {
+    box-shadow: 5px 5px 12px hsla(0, 0%, 0%, 0.08), -5px -5px 12px hsl(0, 0%, 98%);
+    color: #212327;
+    background-color: hsl(0, 0%, 94%);
+}
+
+#description {
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    padding: 1rem;
+    transition: 0.2s;
+}
+
+#description p {
+    margin-bottom: 1rem;
+    line-height: 1.3rem;
+}
+
+#description p:last-of-type {
+    margin: 0;
+}
+
+span {
+    color: #3B9DE5;
 }
 
 main {
@@ -18,27 +50,31 @@ main {
 
 #inputBox {
     padding: 1rem;
-    background-color: hsla(0, 0%, 97%, 0.22);
+    background-color: transparent;
     border: none;
     border-radius: 10px;
     font-size: 1.25rem;
-    color: #f7f7f7;
     width: 100%;
     margin: 0 auto 2rem auto;
+    transition: 0.2s;
 }
 
 .newItemDiv {
     padding: 1rem;
-    background-color: hsla(0, 0%, 97%, 0.22);
+    background-color: transparent;
     border: none;
     border-radius: 10px;
     font-size: 1.25rem;
-    color: #f7f7f7;
     width: 100%;
     margin-bottom: 2rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    transition: 0.2s;
+}
+
+.newItem {
+    transition: 0.2s;
 }
 
 #allButtons {
@@ -49,13 +85,20 @@ main {
 
 #addButton {
     padding: 1rem;
-    background-color: #3BDB8B;
+    background-color: transparent;
     border: none;
     border-radius: 10px;
     font-size: 1.25rem;
-    color: #f7f7f7;
+    color: #37be74;
     width: 100%;
     margin-bottom: 2rem;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+#addButton:hover {
+    transform: scale(1.02);
+    cursor: pointer;
 }
 
 #undoAndDelete {
@@ -70,12 +113,21 @@ main {
     border-radius: 10px;
     font-size: 1.25rem;
     color: #f7f7f7;
+    transition: 0.2s;
+    font-weight: bold;
+}
+
+#undoButton:hover, #clearButton:hover {
+    transform: scale(1.02);
+    cursor: pointer;
 }
 
 #undoButton {
-    background-color: #3B9DE5;
+    background-color: transparent;
+    color: #3B9DE5;
 }
 
 #clearButton {
-    background-color: #E84C4C;
+    background-color: transparent;
+    color: #E84C4C;
 }

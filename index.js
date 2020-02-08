@@ -52,7 +52,8 @@ function renderList(list) {
         let itemContent = document.createTextNode(list[i]);
         let checkbox = document.createElement('input');
         checkbox.type = 'checkbox';
-        checkbox.id = 'checkbox' + i;
+        checkbox.id = 'item' + i + 'checkbox';
+        checkbox.setAttribute('onclick', 'markDone(\'item' + i + '\', \'item' + i + 'checkbox\')')
 
         newItem.appendChild(itemContent);
         newItemDiv.appendChild(newItem);
@@ -60,7 +61,7 @@ function renderList(list) {
         
         newItem.className = 'newItem';
         newItem.id = 'item' + i;
-        newItemDiv.className = 'newItemDiv';
+        newItemDiv.className = 'newItemDiv light';
 
         listDiv.appendChild(newItemDiv);
     };
@@ -81,4 +82,54 @@ function clear() {
     itemList = [];
     // re-render list
     renderList(itemList);
+}
+
+// Mark as done
+function markDone(listItem, listItemCheckbox) {
+    console.log(listItem)
+    let selectedItem = document.getElementById(listItem);
+    
+    let checkboxTest = document.getElementById(listItemCheckbox);
+    if (checkboxTest.checked) {
+        selectedItem.style.color = 'rgb(160, 160, 160)';
+    } else {
+        selectedItem.style.color = '#212327';
+    }
+}
+
+function toggleDarkMode() {
+    let body = document.getElementById('body');
+    let description = document.getElementById('description');
+    let inputBox = document.getElementById('inputBox');
+    let addButton = document.getElementById('addButton');
+    let undoButton = document.getElementById('undoButton');
+    let clearButton = document.getElementById('clearButton');
+    let newItem = document.getElementById('list').childNodes;
+
+    console.log(newItem);
+
+    if (body.className === 'light') {
+        body.setAttribute('class', 'dark')
+        description.setAttribute('class', 'dark')
+        inputBox.setAttribute('class', 'dark')
+        addButton.setAttribute('class', 'dark')
+        undoButton.setAttribute('class', 'dark')
+        clearButton.setAttribute('class', 'dark')
+        
+        for (let i = 0; i < newItem.length; i++) {
+            newItem[i].className = 'newItemDiv dark';
+        }
+
+    } else {
+        body.setAttribute('class', 'light')
+        description.setAttribute('class', 'light')
+        inputBox.setAttribute('class', 'light')
+        addButton.setAttribute('class', 'light')
+        undoButton.setAttribute('class', 'light')
+        clearButton.setAttribute('class', 'light')
+
+        for (let i = 0; i < newItem.length; i++) {
+            newItem[i].className = 'newItemDiv light';
+        }
+    }
 }
